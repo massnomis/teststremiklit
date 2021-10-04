@@ -1,8 +1,5 @@
 import streamlit as st
 import plotly
-import numpy as np
-import altair as alt
-import pydeck as pdk
 import plotly.express as px
 import statsmodels.api as sm
 import pandas as pd
@@ -31,7 +28,12 @@ st.write("TVL")
 dai1 = px.bar(
     df,
     x="DATE",
-    y=["AMM_TVL_SHARE",	"VONE_TVL_SHARE","VTWO_TVL_SHARE"]
+    y=["AMM_TVL_SHARE",	"VONE_TVL_SHARE","VTWO_TVL_SHARE"],
+    color_discrete_map={
+        'AMM_TVL_SHARE': 'red',
+        'VONE_TVL_SHARE': 'green',
+        'VTWO_TVL_SHARE': 'blue'
+    }
 )
 st.plotly_chart(dai1, use_container_width=True)
 
@@ -40,7 +42,12 @@ st.write("SUPPLY")
 dai2 = px.bar(
     df,
     x="DATE",
-    y=["AMM_SUPPLY_SHARE",	"VONE_SUPPLY_SHARE","VTWO_SUPPLY_SHARE"]
+    y=["AMM_SUPPLY_SHARE",	"VONE_SUPPLY_SHARE","VTWO_SUPPLY_SHARE"],
+    color_discrete_map={
+        'AMM_SUPPLY_SHARE': 'red',
+        'VONE_SUPPLY_SHARE': 'green',
+        'VTWO_SUPPLY_SHARE': 'blue'
+    }
 )
 st.plotly_chart(dai2, use_container_width=True)
 
@@ -57,7 +64,12 @@ st.write("TVL")
 USDT1 = px.bar(
     df,
     x="DATE",
-    y=["AMM_TVL_SHARE",	"VONE_TVL_SHARE","VTWO_TVL_SHARE"]
+    y=["AMM_TVL_SHARE",	"VONE_TVL_SHARE","VTWO_TVL_SHARE"],
+    color_discrete_map={
+        'AMM_TVL_SHARE': 'red',
+        'VONE_TVL_SHARE': 'green',
+        'VTWO_TVL_SHARE': 'blue'
+    }
 )
 
 st.plotly_chart(USDT1, use_container_width=True)
@@ -66,7 +78,13 @@ st.write("SUPPLY")
 USDT2 = px.bar(
     df,
     x="DATE",
-    y=["AMM_SUPPLY_SHARE",	"VONE_SUPPLY_SHARE","VTWO_SUPPLY_SHARE"]
+    y=["AMM_SUPPLY_SHARE",	"VONE_SUPPLY_SHARE","VTWO_SUPPLY_SHARE"],
+     color_discrete_map={
+        'AMM_SUPPLY_SHARE': 'red',
+        'VONE_SUPPLY_SHARE': 'green',
+        'VTWO_SUPPLY_SHARE': 'blue'
+    }
+    
 )
 st.plotly_chart(USDT2, use_container_width=True)
 
@@ -86,7 +104,12 @@ st.write("TVL")
 USDC1 = px.bar(
     df,
     x="DATE",
-    y=["AMM_TVL_SHARE",	"VONE_TVL_SHARE","VTWO_TVL_SHARE"]
+    y=["AMM_TVL_SHARE",	"VONE_TVL_SHARE","VTWO_TVL_SHARE"],
+    color_discrete_map={
+        'AMM_TVL_SHARE': 'red',
+        'VONE_TVL_SHARE': 'green',
+        'VTWO_TVL_SHARE': 'blue'
+    }
 )
 
 st.plotly_chart(USDC1, use_container_width=True)
@@ -95,6 +118,11 @@ st.write("SUPPLY")
 USDC2 = px.bar(
     df,
     x="DATE",
-    y=["AMM_SUPPLY_SHARE",	"VONE_SUPPLY_SHARE","VTWO_SUPPLY_SHARE"]
+    y=["AMM_SUPPLY_SHARE",	"VONE_SUPPLY_SHARE","VTWO_SUPPLY_SHARE"],
+     color_discrete_map={
+        'AMM_SUPPLY_SHARE': 'red',
+        'VONE_SUPPLY_SHARE': 'green',
+        'VTWO_SUPPLY_SHARE': 'blue'
+    }
 )
 st.plotly_chart(USDC2, use_container_width=True)
