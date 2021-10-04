@@ -1,5 +1,8 @@
 import streamlit as st
 import plotly
+import numpy as np
+import altair as alt
+import pydeck as pdk
 import plotly.express as px
 import statsmodels.api as sm
 import pandas as pd
