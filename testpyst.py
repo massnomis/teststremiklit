@@ -1,5 +1,5 @@
 import streamlit as st
-!pip import plotly
+import plotly
 import plotly.express as px
 import statsmodels.api as sm
 import pandas as pd
